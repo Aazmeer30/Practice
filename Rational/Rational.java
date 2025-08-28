@@ -1,21 +1,13 @@
 package Rational; 
-// "package" keyword groups related classes together. 
-// This class is in the "Rational" package/folder.
-
 public class Rational { 
-    // "public" → class is visible to other packages.
-    // "class" → defines a blueprint for Rational number objects.
 
     private int num; // numerator of the fraction
     private int den; // denominator of the fraction
 
-    // Constructor: called when a new Rational object is created
     public Rational(int num, int den) {
         if (den == 0) 
             throw new IllegalArgumentException("Denominator cannot be zero!");
-        // Check denominator is not zero (cannot divide by zero)
-        // "throw" stops execution and signals an error
-
+        
         int gcd = gcd(Math.abs(num), Math.abs(den));
         // Calculate greatest common divisor (GCD) to simplify fraction
         // Math.abs ensures gcd is positive
@@ -67,3 +59,4 @@ public class Rational {
         return num + "/" + den; 
     }
 }
+
