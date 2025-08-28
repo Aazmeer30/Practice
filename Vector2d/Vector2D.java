@@ -3,16 +3,11 @@ package Vector2d;
 // This class is in the Vector2D folder/package.
 
 public class Vector2D {
-    // "public" → accessible from other packages
-    // "class" → defines a blueprint for Vector2D objects
-
+  
     private double x, y;  
-    // "private" → only accessible inside this class
-    // x, y → coordinates/components of the vector
-
+   
     // Constructor: called when a new Vector2D object is created
     public Vector2D(double x, double y) {
-        // "this.x" refers to the object's x, "x" is the parameter
         this.x = x;  
         this.y = y;
     }
@@ -29,9 +24,6 @@ public class Vector2D {
 
     // Method to add two vectors
     public Vector2D add(Vector2D v) {
-        // "Vector2D v" → v is a Vector2D object passed as argument
-        // "this" → the current vector object calling the method
-        // Creates and returns a new Vector2D with summed components
         return new Vector2D(this.x + v.x, this.y + v.y);
         // Example: (3,4) + (1,2) → new Vector2D(4,6)
     }
@@ -50,18 +42,15 @@ public class Vector2D {
         // Example: (3,4) * 2 → new Vector2D(6,8)
     }
 
-    // Method to calculate dot product
     public double dot(Vector2D v) {
         // Dot product formula: x1*x2 + y1*y2
         return this.x * v.x + this.y * v.y;
         // Example: (3,4) · (1,2) → 3*1 + 4*2 = 11
-    }
-
-    // Method to calculate magnitude (length) of vector
+    }   
     public double magnitude() {
         // Magnitude formula: sqrt(x^2 + y^2)
         return Math.sqrt(x * x + y * y);
-        // Example: sqrt(3^2 + 4^2) = sqrt(9+16) = 5
+       Example: sqrt(3^2 + 4^2) = sqrt(9+16) = 5
     }
 
     // Convert vector to string for easy printing
@@ -71,3 +60,4 @@ public class Vector2D {
         // Example: (3.0, 4.0)
     }
 }
+
