@@ -1,5 +1,4 @@
 package Turtle;  
-// Main program file (entry point)
 
 public class MainTurtle {
     public static void main(String[] args) {
@@ -14,3 +13,4 @@ public class MainTurtle {
         // Print final position
     }
 }
+
